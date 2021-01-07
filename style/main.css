@@ -1,0 +1,100 @@
+:root{  /* Raiz do documento */
+    --vermelho:#E50914;
+    --preta:#141414;
+}
+
+/* ELEMENTOS BASE */
+body{
+    background: var(--preta); /* Peguei a cor definida no :root */
+    font-family: 'Arial', Times, serif;
+    color: white;
+    }
+
+    *{ /* Referencia a pagina toda */
+        margin: 0; /* Retira a margem superior */
+        padding: 0;
+        box-sizing: border-box; /* Garantir que os elementos tenham o tamanho definido */
+    }
+
+    header .container{ /* Abrange a caixa de navegação e o logo */
+        margin-left: 5px; /* Traz o logo da Netflix um pouco para direita */
+        display: flex; /* Ele joga tudo para cima */
+        flex-direction: row; /* Faz parte da sintaxe do "display: flex" */
+        align-items: center;
+        justify-content: space-between; /* Juntifica os elementos na horizontal */
+    }
+
+    header .logo{
+        color: var(--vermelho); /* Peguei a cor definida no :root */
+        font-family: 'Arial Black', Times;
+        font-size: 40px;
+    }
+
+    header nav a{ /* Alterando todos os nav */
+        text-decoration: none; /* Retira as linhas */
+        color: #AAA;
+        margin-right: 10px; /* Aumenta a margem entre os itens */
+    }
+
+    header nav a:hover{ /* Vai pintar a cor da fonte dos itens do Nav, quando passar o mouse */
+        color: #fff;
+    }
+
+    /* FILME PRINCIPAL */
+    .filme-principal{
+        font-size: 16px;
+        background: linear-gradient(rgba(0,0,0,.50)rgba(0,0,0,.50)100%), url('/img/peakyblinders.jpg');
+        height: 400px;
+        background-size: cover; /* Pega a área de cobertura da caixa */
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centraliza */
+        align-items: flex-start; /* Vai começar da esquerda */
+    }
+
+    .filme-principal .descricao{
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+
+    .filme-principal .titulo{
+        margin-top: 15%;
+        font-size: 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .filme-principal .botao{
+        background-color: rgba(0,0,0,.50);
+        border: none;
+        color: white;
+       
+        padding: 15px 30px; /* Primeito (cima, baixo) - Segundo(Esquerda-Direita) */
+        margin-right: 15px;
+        font-size: 12p;
+
+        cursor: pointer;
+        transition: .3 ease all; /* Tempo da animação */
+    }
+
+    .botao:hover{ 
+        background-color: white;
+        color: black;
+    }
+
+    .botao i{
+        margin-right: 8px; /* Espaçamento dos icones dos botões */
+    }
+    .filme-principal .containe{
+        width: 70%;
+    }
+
+    .box-filme{
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    .carrosel-filmes{
+        margin-top: 50px;
+    }
